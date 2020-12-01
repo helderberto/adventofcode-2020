@@ -1,2 +1,15 @@
-# adventofcode-2020
-Advent of Code 2020
+# Advent of Code (AoC) 2020
+
+This repo contains my solutions for [AoC 2020](https://adventofcode.com/2020).
+
+_Note: All solutions have been solved with JavaScript language._
+
+## Solutions
+
+- [Day 01](day-01/README.md)
+
+## References
+
+- [About](https://adventofcode.com/2020/about)
+- [Calendar](https://adventofcode.com/2020)
+- [Settings](https://adventofcode.com/2020/settings)
