@@ -16,10 +16,14 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": ["yarn lint --fix", "yarn test --findRelatedTests --bail"]
+    "src/**/*.js": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -32,5 +36,8 @@
     "lint-staged": ">=10",
     "prettier": "2.2.1"
   },
-  "keywords": ["adventofcode-2020", "aoc-2020"]
+  "keywords": [
+    "adventofcode-2020",
+    "aoc-2020"
+  ]
 }
