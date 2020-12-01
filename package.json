@@ -3,6 +3,21 @@
   "version": "1.0.0",
   "description": "This repo contains my solutions for [AoC 2020](https://adventofcode.com/2020).",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "format": "yarn lint --fix",
+    "test": "jest",
+    "test:watch": "yarn test --watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": ["yarn lint --fix", "yarn test --findRelatedTests --bail"]
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
@@ -17,20 +32,5 @@
     "lint-staged": ">=10",
     "prettier": "2.2.1"
   },
-  "scripts": {
-    "lint": "eslint --max-warnings=0",
-    "format": "yarn lint --fix",
-    "test": "jest",
-    "test:watch": "yarn test --watch"
-  },
-  "keywords": ["adventofcode-2020", "aoc-2020"],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": ["yarn format", "yarn test --findRelatedTests --bail"]
-  }
+  "keywords": ["adventofcode-2020", "aoc-2020"]
 }
