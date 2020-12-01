@@ -4,6 +4,8 @@
   "description": "This repo contains my solutions for [AoC 2020](https://adventofcode.com/2020).",
   "main": "index.js",
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -18,6 +20,7 @@
   "keywords": ["adventofcode-2020", "aoc-2020"],
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
