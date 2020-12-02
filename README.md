@@ -4,6 +4,14 @@ This repo contains my solutions for [AoC 2020](https://adventofcode.com/2020).
 
 _Note: All solutions have been solved with JavaScript language._
 
+## How to Run
+
+Execute all solutions with the following command:
+
+```sh
+$ yarn start OR npm start
+```
+
 ## Solutions
 
 - [Day 01](src/day-01/README.md)
