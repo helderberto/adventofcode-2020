@@ -1,13 +1,8 @@
-import { readFile } from '../utils/file'
+import { parseFileToArray } from '../utils/file'
 import { multiply, sum } from '../utils/calc'
 
-const splitNumbersFromFile = async () => {
-  const file = await readFile('day-01/input.txt')
-  return file.split('\n')
-}
-
 export const solve = async () => {
-  const numbers = await splitNumbersFromFile()
+  const numbers = await parseFileToArray('day-01/input.txt')
   const when = 2020
   let result
 
