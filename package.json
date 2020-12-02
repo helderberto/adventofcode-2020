@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
+    "dev": "babel-node",
     "lint": "eslint src --max-warnings=0",
     "format": "yarn lint --fix",
     "test": "jest",
