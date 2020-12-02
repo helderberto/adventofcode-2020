@@ -7,6 +7,7 @@ _Note: All solutions have been solved with JavaScript language._
 ## Solutions
 
 - [Day 01](src/day-01/README.md)
+- [Day 02](src/day-02/README.md)
 
 ## References
 
