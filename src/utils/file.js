@@ -16,3 +16,8 @@ export const readFile = (relativePath) =>
       resolve(data)
     })
   })
+
+export const parseFileToArray = async (filePath) => {
+  const file = await readFile(filePath)
+  return file.split('\n')
+}
