@@ -1,18 +1,18 @@
 import { parseFileToArray } from '../utils/file'
 
-const inRange = (times, count) => {
-  const [min, max] = times.split('-')
-  return count >= min && count <= max
-}
+const isBetween = ({ first, last, count }) => count >= first && count <= last
 
-const countOccurrencies = (password, letter) => {
-  const regex = new RegExp(letter, 'g')
-  return (password.match(regex) || []).length
-}
+const hasOneOccurrenceOfLetter = ({ first, last, password, letter }) =>
+  (password.charAt(first) === letter && !(password.charAt(last) === letter)) ||
+  (password.charAt(last) === letter && !(password.charAt(first) === letter))
+
+const countOccurrencies = (password, letter) =>
+  (password.match(new RegExp(letter, 'g')) || []).length
 
 export async function solve() {
   const arr = await parseFileToArray('day-02/input.txt')
-  let valids = 0
+  let part01 = 0
+  let part02 = 0
 
   arr.forEach((item) => {
     const [policy, password] = item.split(': ')
@@ -20,12 +20,25 @@ export async function solve() {
     if (password) {
       const [times, letter] = policy.split(' ')
       const count = countOccurrencies(password, letter)
+      const [first, last] = times.split('-')
 
-      if (inRange(times, count)) {
-        valids++
+      if (isBetween({ first, last, count })) {
+        part01++
+      }
+
+      if (
+        hasOneOccurrenceOfLetter({
+          first: first - 1,
+          last: last - 1,
+          password,
+          letter,
+        })
+      ) {
+        part02++
       }
     }
   })
 
-  console.log('day 02 - part 01', valids)
+  console.log('day 02 - part 01', part01)
+  console.log('day 02 - part 02', part02)
 }
