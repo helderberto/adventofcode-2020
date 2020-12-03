@@ -81,3 +81,5 @@ Right 1, down 2.
 In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; multiplied together, these produce the answer 336.
 
 What do you get if you multiply together the number of trees encountered on each of the listed slopes?
+
+Your puzzle answer was `3510149120`.
