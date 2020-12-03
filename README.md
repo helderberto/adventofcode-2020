@@ -16,6 +16,7 @@ $ yarn start OR npm start
 
 - [Day 01](src/day-01/README.md)
 - [Day 02](src/day-02/README.md)
+- [Day 03](src/day-03/README.md)
 
 ## References
 
